@@ -21,6 +21,8 @@ font-family:'Segoe UI', sans-serif;
 background:var(--bg);
 color:var(--text);
 transition:0.5s;
+overflow-x:hidden;
+cursor:pointer; /* shows user can click */
 }
 
 header{
@@ -123,8 +125,8 @@ header{font-size:22px;}
 </head>
 <body>
 
-<!-- BACKGROUND SONG AUTOPLAY -->
-<audio id="bgMusic" src="song.mp4" loop autoplay></audio>
+<!-- MUSIC -->
+<audio id="bgMusic" src="song.mp3" loop></audio>
 
 <header>AP GRADE 10 CONTEMPORARY ISSUES PORTFOLIO</header>
 
@@ -139,14 +141,13 @@ header{font-size:22px;}
 <div id="profile" class="section">
 <div class="card">
 <h2>My Profile</h2>
-<p>Ako ay si Zymon Vincent C. Agulto Grade 10 student na nag-aaral ng Kontemporaryong Isyu sa Araling Panlipunan. Sa website na ito, makikita ang aking pagtalakay sa mga isyung pangkapaligiran, pang-ekonomiya, pangkasarian, at pampolitika, pati na rin ang mga mahahalagang salita at karapatan.</p>
+<p>Ako ay Grade 10 student na nag-aaral ng Kontemporaryong Isyu sa Araling Panlipunan. Sa website na ito, makikita ang aking pagtalakay sa mga isyung pangkapaligiran, pang-ekonomiya, pangkasarian, at pampolitika, pati na rin ang mga mahahalagang salita at karapatan.</p>
 </div>
 </div>
 
 <!-- KARAPATAN -->
 <div id="karapatan" class="section">
 <div class="cards">
-
 <div class="card"><h3>Karapatan magkaroon ng sariling ari-arian at gamit</h3><p>Ang bawat tao ay may karapatan sa sariling bagay at kagamitan.</p></div>
 <div class="card"><h3>Karapatan magkaroon ng sapat na pagkain</h3><p>Karapatan ng tao na hindi magutom at magkaroon ng tamang nutrisyon.</p></div>
 <div class="card"><h3>Karapatan magkaroon ng talento at paunlarin ito</h3><p>May karapatan ang bawat isa na tuklasin at paunlarin ang sariling kakayahan.</p></div>
@@ -157,14 +158,12 @@ header{font-size:22px;}
 <div class="card"><h3>Karapatang pumili ng sasamahan o kakakaibiganin</h3><p>Kalayaan ng tao na pumili ng kaibigan o kasama sa buhay.</p></div>
 <div class="card"><h3>Karapatang maisilang at magkaroon ng pangalan at nasyonalidad</h3><p>Karapatan ng bawat tao na kilalanin sa legal na paraan at magkaroon ng identidad.</p></div>
 <div class="card"><h3>Karapatang magkaroon ng karangalan</h3><p>Ang bawat tao ay may karapatan sa dignidad at respeto.</p></div>
-
 </div>
 </div>
 
 <!-- ARTICLES -->
 <div id="articles" class="section">
 <div class="article">
-
 <h2 style="text-align:center;">🌏 ISYUNG PANGKAPALIGIRAN</h2>
 <h3 style="text-align:center;">Basura Ngayon, Baha Bukas</h3>
 <p><i>Pahayagan: Ang Tinig ng Kabataan | Marso 4, 2026</i></p>
@@ -190,7 +189,6 @@ header{font-size:22px;}
 <h3 style="text-align:center;">Kabataan, Makilahok sa Halalan</h3>
 <p><i>Pahayagan: Ang Makabagong Pananaw | Marso 4, 2026</i></p>
 <p>Ang pagboto ay mahalagang paraan upang maipahayag ang boses ng mamamayan at makapili ng lider na may malasakit sa bayan. Sa pagiging mapanuri, makatutulong ang kabataan sa paghubog ng mas maayos na pamahalaan.</p>
-
 </div>
 </div>
 
@@ -198,7 +196,6 @@ header{font-size:22px;}
 <div id="talasalitaan" class="section">
 <input type="text" id="search" placeholder="Search word..." onkeyup="searchWord()">
 <div class="cards" id="wordList">
-
 <div class="card"><h3>Aktibismo</h3><p>Pagkilos upang ipaglaban ang paniniwala o karapatan.</p></div>
 <div class="card"><h3>Badyet</h3><p>Plano ng paggasta ng pamahalaan.</p></div>
 <div class="card"><h3>Climate Change</h3><p>Pagbabago ng klima ng mundo.</p></div>
@@ -224,7 +221,6 @@ header{font-size:22px;}
 <div class="card"><h3>Rebolusyon</h3><p>Malawakang pagbabago sa pamahalaan o sistema.</p></div>
 <div class="card"><h3>Soberanya</h3><p>Ganap na kapangyarihan ng isang bansa.</p></div>
 <div class="card"><h3>Urbanisasyon</h3><p>Pagdami ng tao sa lungsod.</p></div>
-
 </div>
 </div>
 
@@ -233,6 +229,7 @@ function showSection(id){
 document.querySelectorAll('.section').forEach(sec=>sec.style.display='none');
 document.getElementById(id).style.display='block';
 }
+
 function searchWord(){
 let input=document.getElementById("search").value.toLowerCase();
 let cards=document.querySelectorAll("#wordList .card");
@@ -241,6 +238,15 @@ let text=card.innerText.toLowerCase();
 card.style.display=text.includes(input) ? "block" : "none";
 });
 }
+
+// Play music on first click anywhere
+let musicPlayed=false;
+document.body.addEventListener('click', function(){
+if(!musicPlayed){
+document.getElementById('bgMusic').play().catch(err=>console.log("Play blocked:", err));
+musicPlayed=true;
+}
+}, {once:true}); // only first click triggers
 </script>
 
 </body>
