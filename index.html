@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AP Grade 10 Contemporary Issues Portfolio</title>
+
+<style>
+:root{
+--bg:#121212;
+--card:#1e1e1e;
+--text:#f4f4f4;
+--accent:#1cc88a;
+--accent-dark:#159c73;
+--shadow:rgba(0,0,0,0.6);
+}
+
+body{
+margin:0;
+font-family:'Segoe UI', sans-serif;
+background:var(--bg);
+color:var(--text);
+transition:0.5s;
+}
+
+header{
+text-align:center;
+padding:30px 15px;
+font-size:30px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+.nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-bottom:25px;
+}
+
+.btn{
+padding:12px 28px;
+border-radius:40px;
+background:var(--accent);
+color:white;
+cursor:pointer;
+transition:0.3s;
+font-weight:bold;
+text-align:center;
+box-shadow:0 4px 12px var(--shadow);
+}
+
+.btn:hover{
+transform:scale(1.05);
+background:var(--accent-dark);
+}
+
+.section{
+display:none;
+padding:20px;
+animation:fade 0.6s ease-in-out;
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(10px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.card{
+background:var(--card);
+padding:22px;
+border-radius:18px;
+box-shadow:0 6px 15px var(--shadow);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 20px var(--shadow);
+}
+
+input{
+padding:12px;
+width:100%;
+max-width:450px;
+margin:15px auto;
+display:block;
+border-radius:25px;
+border:1px solid #333;
+background:#1b1b1b;
+color:#f4f4f4;
+}
+
+.article{
+background:var(--card);
+padding:30px;
+border-radius:15px;
+max-width:900px;
+margin:auto;
+line-height:1.8;
+}
+
+hr{
+margin:40px 0;
+border:0.5px solid #333;
+}
+
+audio{
+display:none;
+}
+
+@media(max-width:600px){
+header{font-size:22px;}
+}
+</style>
+</head>
+<body>
+
+<!-- BACKGROUND SONG AUTOPLAY -->
+<audio id="bgMusic" src="song.mp4" loop autoplay></audio>
+
+<header>AP GRADE 10 CONTEMPORARY ISSUES PORTFOLIO</header>
+
+<div class="nav">
+<div class="btn" onclick="showSection('profile')">Profile</div>
+<div class="btn" onclick="showSection('karapatan')">Mga Karapatan</div>
+<div class="btn" onclick="showSection('articles')">Mga Artikulo</div>
+<div class="btn" onclick="showSection('talasalitaan')">Talasalitaan</div>
+</div>
+
+<!-- PROFILE -->
+<div id="profile" class="section">
+<div class="card">
+<h2>My Profile</h2>
+<p>Ako ay si Zymon Vincent C. Agulto Grade 10 student na nag-aaral ng Kontemporaryong Isyu sa Araling Panlipunan. Sa website na ito, makikita ang aking pagtalakay sa mga isyung pangkapaligiran, pang-ekonomiya, pangkasarian, at pampolitika, pati na rin ang mga mahahalagang salita at karapatan.</p>
+</div>
+</div>
+
+<!-- KARAPATAN -->
+<div id="karapatan" class="section">
+<div class="cards">
+
+<div class="card"><h3>Karapatan magkaroon ng sariling ari-arian at gamit</h3><p>Ang bawat tao ay may karapatan sa sariling bagay at kagamitan.</p></div>
+<div class="card"><h3>Karapatan magkaroon ng sapat na pagkain</h3><p>Karapatan ng tao na hindi magutom at magkaroon ng tamang nutrisyon.</p></div>
+<div class="card"><h3>Karapatan magkaroon ng talento at paunlarin ito</h3><p>May karapatan ang bawat isa na tuklasin at paunlarin ang sariling kakayahan.</p></div>
+<div class="card"><h3>Karapatan magkaroon ng payapa at masayang pamilya</h3><p>Ang bawat tao ay may karapatang magkaroon ng maayos at mapayapang pamilya.</p></div>
+<div class="card"><h3>Karapatan sumamba at manampalataya</h3><p>May kalayaan ang tao sa sariling paniniwala at relihiyon.</p></div>
+<div class="card"><h3>Karapatang mag-enjoy at maglaro</h3><p>May karapatan ang lahat na magpahinga, magsaya, at makapaglibang.</p></div>
+<div class="card"><h3>Karapatang kumilala ng ibang tao</h3><p>Karapatan ng tao na makilala at makipag-ugnayan sa kapwa.</p></div>
+<div class="card"><h3>Karapatang pumili ng sasamahan o kakakaibiganin</h3><p>Kalayaan ng tao na pumili ng kaibigan o kasama sa buhay.</p></div>
+<div class="card"><h3>Karapatang maisilang at magkaroon ng pangalan at nasyonalidad</h3><p>Karapatan ng bawat tao na kilalanin sa legal na paraan at magkaroon ng identidad.</p></div>
+<div class="card"><h3>Karapatang magkaroon ng karangalan</h3><p>Ang bawat tao ay may karapatan sa dignidad at respeto.</p></div>
+
+</div>
+</div>
+
+<!-- ARTICLES -->
+<div id="articles" class="section">
+<div class="article">
+
+<h2 style="text-align:center;">🌏 ISYUNG PANGKAPALIGIRAN</h2>
+<h3 style="text-align:center;">Basura Ngayon, Baha Bukas</h3>
+<p><i>Pahayagan: Ang Tinig ng Kabataan | Marso 4, 2026</i></p>
+<p>Patuloy ang pagdami ng basura sa mga komunidad na nagiging sanhi ng pagbaha at polusyon. Mahalaga ang tamang segregasyon at pakikiisa sa mga programang pangkalikasan upang mapanatili ang kalinisan at kaligtasan ng kapaligiran.</p>
+
+<hr>
+
+<h2 style="text-align:center;">💰 ISYUNG PANG-EKONOMIYA</h2>
+<h3 style="text-align:center;">Pagtaas ng Presyo, Dagdag Pahirap sa Pamilya</h3>
+<p><i>Pahayagan: Balitang Bayan | Marso 4, 2026</i></p>
+<p>Ramdam ng maraming Pilipino ang patuloy na pagtaas ng presyo ng mga pangunahing bilihin. Kinakailangan ang tamang polisiya at suporta sa lokal na produksyon upang matulungan ang mamamayan at mapatatag ang ekonomiya.</p>
+
+<hr>
+
+<h2 style="text-align:center;">⚖ ISYUNG PANGKASARIAN</h2>
+<h3 style="text-align:center;">Pantay na Karapatan para sa Lahat</h3>
+<p><i>Pahayagan: Boses ng Kabataan | Marso 4, 2026</i></p>
+<p>May mga taong nakararanas pa rin ng diskriminasyon dahil sa kasarian. Mahalaga ang paggalang at pagkakapantay-pantay upang makabuo ng lipunang makatarungan at bukas para sa lahat.</p>
+
+<hr>
+
+<h2 style="text-align:center;">🗳 ISYUNG PAMPOLITIKA</h2>
+<h3 style="text-align:center;">Kabataan, Makilahok sa Halalan</h3>
+<p><i>Pahayagan: Ang Makabagong Pananaw | Marso 4, 2026</i></p>
+<p>Ang pagboto ay mahalagang paraan upang maipahayag ang boses ng mamamayan at makapili ng lider na may malasakit sa bayan. Sa pagiging mapanuri, makatutulong ang kabataan sa paghubog ng mas maayos na pamahalaan.</p>
+
+</div>
+</div>
+
+<!-- TALASALITAAN -->
+<div id="talasalitaan" class="section">
+<input type="text" id="search" placeholder="Search word..." onkeyup="searchWord()">
+<div class="cards" id="wordList">
+
+<div class="card"><h3>Aktibismo</h3><p>Pagkilos upang ipaglaban ang paniniwala o karapatan.</p></div>
+<div class="card"><h3>Badyet</h3><p>Plano ng paggasta ng pamahalaan.</p></div>
+<div class="card"><h3>Climate Change</h3><p>Pagbabago ng klima ng mundo.</p></div>
+<div class="card"><h3>Demokrasya</h3><p>Pamahalaang ang kapangyarihan ay nasa mamamayan.</p></div>
+<div class="card"><h3>Diskriminasyon</h3><p>Hindi pantay na pagtrato sa tao.</p></div>
+<div class="card"><h3>Ekonomiya</h3><p>Sistema ng produksyon at kalakalan ng bansa.</p></div>
+<div class="card"><h3>Eleksyon</h3><p>Proseso ng pagpili ng lider.</p></div>
+<div class="card"><h3>Emigrasyon</h3><p>Pag-alis ng tao patungo sa ibang bansa.</p></div>
+<div class="card"><h3>Globalisasyon</h3><p>Pagkakaugnay ng mga bansa sa mundo.</p></div>
+<div class="card"><h3>Halalan</h3><p>Pagboto upang pumili ng opisyal.</p></div>
+<div class="card"><h3>Imigrasyon</h3><p>Pagpasok ng tao sa ibang bansa upang manirahan.</p></div>
+<div class="card"><h3>Implasyon</h3><p>Patuloy na pagtaas ng presyo ng bilihin.</p></div>
+<div class="card"><h3>Isyu</h3><p>Mahalagang suliraning panlipunan.</p></div>
+<div class="card"><h3>Kahirapan</h3><p>Kalagayan ng kakulangan sa yaman o kita.</p></div>
+<div class="card"><h3>Karapatang Pantao</h3><p>Mga pangunahing karapatan ng tao.</p></div>
+<div class="card"><h3>Kasarian</h3><p>Pagkakakilanlan bilang lalaki, babae, o iba pa.</p></div>
+<div class="card"><h3>Konstitusyon</h3><p>Pinakamataas na batas ng bansa.</p></div>
+<div class="card"><h3>Korapsyon</h3><p>Paggamit ng kapangyarihan para sa pansariling interes.</p></div>
+<div class="card"><h3>Migrasyon</h3><p>Paglipat ng tirahan ng tao.</p></div>
+<div class="card"><h3>Pagkakapantay-pantay</h3><p>Pantay na pagtrato sa lahat.</p></div>
+<div class="card"><h3>Polusyon</h3><p>Pagdumi ng kapaligiran.</p></div>
+<div class="card"><h3>Produksyon</h3><p>Paglikha ng produkto o serbisyo.</p></div>
+<div class="card"><h3>Rebolusyon</h3><p>Malawakang pagbabago sa pamahalaan o sistema.</p></div>
+<div class="card"><h3>Soberanya</h3><p>Ganap na kapangyarihan ng isang bansa.</p></div>
+<div class="card"><h3>Urbanisasyon</h3><p>Pagdami ng tao sa lungsod.</p></div>
+
+</div>
+</div>
+
+<script>
+function showSection(id){
+document.querySelectorAll('.section').forEach(sec=>sec.style.display='none');
+document.getElementById(id).style.display='block';
+}
+function searchWord(){
+let input=document.getElementById("search").value.toLowerCase();
+let cards=document.querySelectorAll("#wordList .card");
+cards.forEach(card=>{
+let text=card.innerText.toLowerCase();
+card.style.display=text.includes(input) ? "block" : "none";
+});
+}
+</script>
+
+</body>
+</html>
